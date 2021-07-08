@@ -8,7 +8,10 @@ namespace Workshop
         {
             Console.WriteLine("Welcome to Tic Tac Toe Game");
             TicTacToeGame ticTacToeGame = new TicTacToeGame();
-            ticTacToeGame.CreateBoard();
+            char[] board =ticTacToeGame.CreateBoard();
+            char playerChoice = ticTacToeGame.SelectOption();
+            char computerChoice = playerChoice == 'X' ? 'O' : 'X';
+            Console.WriteLine("Player choice:{0} Computer Choice:{1}",playerChoice,computerChoice);
         }
     }
 }
