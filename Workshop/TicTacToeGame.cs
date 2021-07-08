@@ -26,8 +26,17 @@ namespace Workshop
         {
             Console.WriteLine("Enter your choice as X or O");
             char choice = Convert.ToChar(Console.ReadLine());
+
+            if(char.ToUpper(choice)!= 'X' && char.ToUpper(choice) !='O')
+            {
+                Console.WriteLine("Enter either X or O");
+                choice = SelectOption();
+            }
+
             return char.ToUpper(choice);
         }
+
     }
+
 }
     
