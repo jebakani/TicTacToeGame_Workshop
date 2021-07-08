@@ -26,7 +26,7 @@ namespace Workshop
         {
             Console.WriteLine("Enter your choice as X or O");
             char choice = Convert.ToChar(Console.ReadLine());
-            return choice;
+            return char.ToUpper(choice);
         }
     }
 }
