@@ -13,6 +13,7 @@ namespace Workshop
             char computerChoice = playerChoice == 'X' ? 'O' : 'X';
             Console.WriteLine("Player choice:{0} Computer Choice:{1}",playerChoice,computerChoice);
             ticTacToeGame.DisplayBoard(board);
+            board = ticTacToeGame.MovePosition(board, playerChoice);
         }
     }
 }

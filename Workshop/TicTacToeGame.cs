@@ -40,23 +40,39 @@ namespace Workshop
 
         public void DisplayBoard(char[] board)
         {
-            int row = 0;
-            int column = 0;
+            Console.WriteLine("---------------------");
+
+            Console.WriteLine("  {0}  |  {1}  |  {2}", board[1], board[2], board[3]);
+
+            Console.WriteLine("---------------------");
+
+            Console.WriteLine("  {0}  |  {1}  |  {2}", board[4], board[5], board[6]);
+
+            Console.WriteLine("_--------------------");
+
+            Console.WriteLine("  {0}  |  {1}  |  {2}", board[7], board[8], board[9]);
+
+            Console.WriteLine("---------------------");
+        }
+
+        public char[] MovePosition(char[] board , char symbol)
+        {
             int position = 1;
-            Console.WriteLine("-------------");
-            while (row!=ROW)
+            DisplayBoard(board);
+            Console.WriteLine("Enter your choice of position");
+            int posChoice = Convert.ToInt32(Console.ReadLine());
+            if(board[posChoice]==' ')
             {
-                column = 0;
-                while(column!=COLUMN)
-                {
-                    Console.Write(" {0} |", board[position]);
-                    position++;
-                    column++;
-                }
-                Console.WriteLine();
-                Console.WriteLine("-------------");
-                row++;
+                board[posChoice] = symbol;
             }
+            else
+            {
+                Console.WriteLine("Position is already occupied.\nChoose another position");
+                board = MovePosition(board, symbol);
+
+            }
+            DisplayBoard(board);
+            return board;
         }
 
     }
