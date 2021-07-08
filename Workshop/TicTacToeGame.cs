@@ -8,8 +8,6 @@ namespace Workshop
 {
     class TicTacToeGame
     {
-        public const int ROW = 3;
-        public const int COLUMN = 3;
         public char[] board;
         public char[] CreateBoard()
         {
@@ -59,7 +57,7 @@ namespace Workshop
         {
             int position = 1;
             DisplayBoard(board);
-            Console.WriteLine("Enter your choice of position");
+            Console.WriteLine("Enter your choice of position from 1 to 9 :");
             int posChoice = Convert.ToInt32(Console.ReadLine());
             if(board[posChoice]==' ')
             {
