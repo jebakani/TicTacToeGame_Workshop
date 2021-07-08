@@ -43,7 +43,7 @@ namespace Workshop
             int row = 0;
             int column = 0;
             int position = 1;
-            Console.WriteLine("--------------");
+            Console.WriteLine("-------------");
             while (row!=ROW)
             {
                 column = 0;
