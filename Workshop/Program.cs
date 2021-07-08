@@ -14,6 +14,7 @@ namespace Workshop
             Console.WriteLine("Player choice:{0} Computer Choice:{1}",playerChoice,computerChoice);
             ticTacToeGame.DisplayBoard(board);
             board = ticTacToeGame.MovePosition(board, playerChoice);
+            board = ticTacToeGame.MovePosition(board, computerChoice);
         }
     }
 }
