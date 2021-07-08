@@ -12,6 +12,7 @@ namespace Workshop
             char playerChoice = ticTacToeGame.SelectOption();
             char computerChoice = playerChoice == 'X' ? 'O' : 'X';
             Console.WriteLine("Player choice:{0} Computer Choice:{1}",playerChoice,computerChoice);
+            ticTacToeGame.DisplayBoard(board);
         }
     }
 }

@@ -8,6 +8,8 @@ namespace Workshop
 {
     class TicTacToeGame
     {
+        public const int ROW = 3;
+        public const int COLUMN = 3;
         public char[] board;
         public char[] CreateBoard()
         {
@@ -34,6 +36,27 @@ namespace Workshop
             }
 
             return char.ToUpper(choice);
+        }
+
+        public void DisplayBoard(char[] board)
+        {
+            int row = 0;
+            int column = 0;
+            int position = 1;
+            Console.WriteLine("--------------");
+            while (row!=ROW)
+            {
+                column = 0;
+                while(column!=COLUMN)
+                {
+                    Console.Write(" {0} |", board[position]);
+                    position++;
+                    column++;
+                }
+                Console.WriteLine();
+                Console.WriteLine("-------------");
+                row++;
+            }
         }
 
     }
