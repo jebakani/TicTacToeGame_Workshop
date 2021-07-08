@@ -9,10 +9,15 @@ namespace Workshop
     class TicTacToeGame
     {
         public char[] board;
-        public void CreateBoard()
+        public char[] CreateBoard()
         {
              board = new char[10];
+            for(int i=1;i<10;i++)
+            {
+                board[i] = ' ';
+            }
             Console.WriteLine("Empty board created");
+            return board;
         }
     }
 }
